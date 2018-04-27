@@ -4,6 +4,9 @@ public class MaxSuccessfulDeliveryValidationProcessor extends  ValidationProcess
 
 	public boolean validate(CommunicationRequest request) {
 		System.out.println("In "+MaxSuccessfulDeliveryValidationProcessor.class.getCanonicalName());
+		if(request.getSuccessfulDeliveries() < request.getSuccessfulDeliveries()) {
+			//do validation
+		}
 		return true;
 	}
 }
