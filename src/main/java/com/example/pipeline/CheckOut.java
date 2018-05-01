@@ -15,7 +15,7 @@ public class CheckOut {
 		//and other can skip them completely
 		try {
 			if(pipeLine.validate(request)) {
-				Channel determineChannel = (new RuleManager()).determineChannel();
+				Channel determineChannel = (new ChannelSelector()).determineChannel(request);
 				switch(determineChannel) {
 				case EMAIL:
 						//do someting as simple as sending the email 
